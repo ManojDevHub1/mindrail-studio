@@ -1,0 +1,61 @@
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mr-space-1);
+  width: 100%;
+}
+
+.label {
+  font-size: var(--mr-text-xs);
+  font-weight: 500;
+  color: var(--mr-text-secondary);
+}
+
+.input, .textarea, .select {
+  width: 100%;
+  font-family: var(--mr-font-sans);
+  font-size: var(--mr-text-sm);
+  color: var(--mr-text-primary);
+  background-color: var(--mr-bg-surface-2);
+  border: 1px solid var(--mr-border-default);
+  border-radius: var(--mr-radius-sm);
+  padding: 8px 12px;
+  outline: none;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.input:hover, .textarea:hover, .select:hover {
+  border-color: var(--mr-border-strong);
+}
+
+.input:focus-visible, .textarea:focus-visible, .select:focus-visible {
+  border-color: var(--mr-border-focus);
+}
+
+.input.error, .textarea.error, .select.error {
+  border-color: var(--mr-color-danger);
+}
+
+.textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.codeTextarea {
+  font-family: var(--mr-font-mono);
+  font-size: var(--mr-text-xs);
+  line-height: 1.45;
+  tab-size: 2;
+  white-space: pre;
+}
+
+.errorText {
+  font-size: var(--mr-text-xs);
+  color: var(--mr-color-danger);
+  margin-top: 2px;
+}
+
+.helperText {
+  font-size: var(--mr-text-xs);
+  color: var(--mr-text-muted);
+}

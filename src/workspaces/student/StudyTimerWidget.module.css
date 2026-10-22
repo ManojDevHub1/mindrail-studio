@@ -1,0 +1,89 @@
+.timerCard {
+  background-color: var(--mr-bg-surface-2);
+  border: 1px solid var(--mr-border-default);
+  border-radius: var(--mr-radius-md);
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: var(--mr-shadow-sm);
+  user-select: none;
+}
+
+.modeToggle {
+  display: flex;
+  background-color: var(--mr-bg-surface-3);
+  padding: 2px;
+  border-radius: var(--mr-radius-sm);
+  border: 1px solid var(--mr-border-subtle);
+}
+
+.modeBtn {
+  background: transparent;
+  border: none;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--mr-text-secondary);
+  padding: 3px 8px;
+  border-radius: var(--mr-radius-xs);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.modeBtnActive {
+  background-color: var(--mr-bg-surface-1);
+  color: var(--mr-text-primary);
+  box-shadow: var(--mr-shadow-sm);
+}
+
+.timeDisplay {
+  font-family: var(--mr-font-mono);
+  font-size: var(--mr-text-lg);
+  font-weight: 700;
+  color: var(--mr-text-primary);
+  letter-spacing: 0.05em;
+  min-width: 65px;
+  text-align: center;
+}
+
+.timeRunning {
+  color: var(--mr-accent-primary);
+}
+
+.timeCompleted {
+  color: var(--mr-node-emerald-accent);
+  animation: pulseCompleted 1s infinite alternate;
+}
+
+@keyframes pulseCompleted {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+.controlsRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sessionsBadge {
+  font-size: 10px;
+  color: var(--mr-text-muted);
+  white-space: nowrap;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

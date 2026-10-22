@@ -1,0 +1,65 @@
+.minimapContainer {
+  position: absolute;
+  bottom: var(--mr-space-4);
+  right: var(--mr-space-4);
+  z-index: 120;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--mr-bg-surface-2);
+  border: 1px solid var(--mr-border-default);
+  border-radius: var(--mr-radius-md);
+  box-shadow: var(--mr-shadow-md);
+  overflow: hidden;
+  user-select: none;
+  backdrop-filter: blur(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 8px;
+  background-color: var(--mr-bg-surface-1);
+  border-bottom: 1px solid var(--mr-border-subtle);
+  font-size: var(--mr-text-xs);
+  color: var(--mr-text-muted);
+}
+
+.title {
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--mr-text-secondary);
+}
+
+.svgStage {
+  display: block;
+  cursor: crosshair;
+  background-color: var(--mr-bg-surface-3);
+}
+
+.viewportIndicator {
+  stroke: var(--mr-accent-primary);
+  stroke-width: 1.5;
+  fill: rgba(94, 158, 255, 0.18);
+  cursor: move;
+  transition: fill 0.15s ease;
+}
+
+.viewportIndicator:hover {
+  fill: rgba(94, 158, 255, 0.28);
+}
+
+.nodeRect {
+  rx: 1;
+  ry: 1;
+  opacity: 0.85;
+}
+
+.selectedNodeRect {
+  stroke: #ffffff;
+  stroke-width: 1;
+  opacity: 1;
+}

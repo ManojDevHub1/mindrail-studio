@@ -1,0 +1,151 @@
+.header {
+  height: var(--mr-layout-header-h);
+  background-color: var(--mr-bg-surface-1);
+  border-bottom: 1px solid var(--mr-border-default);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--mr-space-4);
+  z-index: 60;
+  user-select: none;
+  gap: var(--mr-space-3);
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: var(--mr-space-3);
+  min-width: 0;
+}
+
+.brandLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--mr-text-primary);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: var(--mr-text-sm);
+}
+
+.divider {
+  width: 1px;
+  height: 20px;
+  background-color: var(--mr-border-default);
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.titleDisplay {
+  font-size: var(--mr-text-sm);
+  font-weight: 600;
+  color: var(--mr-text-primary);
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: var(--mr-radius-xs);
+  border: 1px solid transparent;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 300px;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.titleDisplay:hover {
+  background-color: var(--mr-bg-surface-2);
+  border-color: var(--mr-border-default);
+}
+
+.titleInput {
+  font-family: var(--mr-font-sans);
+  font-size: var(--mr-text-sm);
+  font-weight: 600;
+  color: var(--mr-text-primary);
+  background-color: var(--mr-bg-surface-2);
+  border: 1px solid var(--mr-border-focus);
+  border-radius: var(--mr-radius-xs);
+  padding: 3px 7px;
+  outline: none;
+  width: 260px;
+}
+
+.saveBadge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--mr-text-xs);
+  color: var(--mr-text-muted);
+}
+
+.saveDot {
+  width: 7px;
+  height: 7px;
+  border-radius: var(--mr-radius-full);
+}
+
+.saveDotSaved {
+  background-color: var(--mr-color-success);
+}
+
+.saveDotUnsaved {
+  background-color: var(--mr-color-warning);
+}
+
+.saveDotSaving {
+  background-color: var(--mr-color-info);
+  animation: pulse 1s infinite alternate;
+}
+
+.saveDotError {
+  background-color: var(--mr-color-danger);
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: var(--mr-space-2);
+}
+
+@keyframes pulse {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .titleDisplay {
+    max-width: 140px;
+  }
+  .saveText {
+    display: none;
+  }
+  .btnTextCollapseTablet {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .btnTextCollapse {
+    display: none;
+  }
+  .header {
+    padding: 0 var(--mr-space-2);
+    gap: var(--mr-space-1);
+  }
+  .rightSection {
+    gap: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .titleDisplay {
+    max-width: 100px;
+  }
+  .brandLink span {
+    display: none;
+  }
+}

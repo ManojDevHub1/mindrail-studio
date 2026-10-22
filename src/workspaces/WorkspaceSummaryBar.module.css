@@ -1,0 +1,79 @@
+.summaryBar {
+  background-color: var(--mr-bg-surface-2);
+  border-bottom: 1px solid var(--mr-border-default);
+  padding: 6px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--mr-text-xs);
+  color: var(--mr-text-secondary);
+  user-select: none;
+  z-index: 40;
+  overflow-x: auto;
+  gap: 12px;
+}
+
+.metricsGroup {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.metricItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.metricValue {
+  font-weight: 600;
+  color: var(--mr-text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.metricDot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.dotEmerald { background-color: var(--mr-node-emerald-accent); }
+.dotBlue { background-color: var(--mr-node-blue-accent); }
+.dotAmber { background-color: var(--mr-node-amber-accent); }
+.dotPurple { background-color: var(--mr-node-purple-accent); }
+.dotOrange { background-color: var(--mr-node-orange-accent); }
+
+.progressBarMini {
+  width: 64px;
+  height: 6px;
+  background-color: var(--mr-bg-surface-3);
+  border-radius: var(--mr-radius-full);
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.progressBarMiniFill {
+  height: 100%;
+  border-radius: var(--mr-radius-full);
+}
+
+.actionsGroup {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .summaryBar {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+  .metricsGroup {
+    gap: 10px;
+  }
+}

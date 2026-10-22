@@ -1,0 +1,106 @@
+.contextMenu {
+  position: fixed;
+  z-index: 300;
+  min-width: 195px;
+  background-color: var(--mr-bg-surface-1);
+  border: 1px solid var(--mr-border-strong);
+  border-radius: var(--mr-radius-md);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  animation: menuAppear 0.1s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+@keyframes menuAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(-2px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.menuHeader {
+  padding: 6px 8px 4px 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--mr-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 6px 10px;
+  font-size: var(--mr-text-sm);
+  color: var(--mr-text-primary);
+  background: transparent;
+  border: none;
+  border-radius: var(--mr-radius-sm);
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.12s ease, color 0.12s ease;
+  outline: none;
+  gap: 8px;
+}
+
+.menuItem:hover,
+.menuItem:focus-visible {
+  background-color: var(--mr-bg-surface-3);
+  color: var(--mr-text-primary);
+}
+
+.menuItemContent {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.menuItemIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--mr-text-secondary);
+}
+
+.menuItem:hover .menuItemIcon,
+.menuItem:focus-visible .menuItemIcon {
+  color: var(--mr-accent-primary);
+}
+
+.shortcutHint {
+  font-size: 10px;
+  color: var(--mr-text-muted);
+  font-family: var(--mr-font-mono);
+}
+
+.separator {
+  height: 1px;
+  background-color: var(--mr-border-subtle);
+  margin: 4px 2px;
+}
+
+.dangerItem {
+  color: var(--mr-color-danger);
+}
+
+.dangerItem .menuItemIcon {
+  color: var(--mr-color-danger);
+}
+
+.dangerItem:hover,
+.dangerItem:focus-visible {
+  background-color: rgba(248, 113, 113, 0.15);
+  color: var(--mr-color-danger);
+}

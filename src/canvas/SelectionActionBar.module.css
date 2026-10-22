@@ -1,0 +1,82 @@
+.actionBarContainer {
+  position: absolute;
+  top: var(--mr-space-4);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 130;
+  display: flex;
+  align-items: center;
+  gap: var(--mr-space-3);
+  padding: 6px 14px;
+  background-color: var(--mr-bg-surface-2);
+  border: 1px solid var(--mr-border-strong);
+  border-radius: var(--mr-radius-full);
+  box-shadow: var(--mr-shadow-lg);
+  backdrop-filter: blur(12px);
+  animation: slideDown 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+.countPill {
+  font-size: var(--mr-text-xs);
+  font-weight: 600;
+  color: var(--mr-text-primary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.badgeCount {
+  background-color: var(--mr-accent-primary);
+  color: #ffffff;
+  border-radius: var(--mr-radius-full);
+  padding: 1px 7px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.divider {
+  width: 1px;
+  height: 18px;
+  background-color: var(--mr-border-subtle);
+}
+
+.swatchGroup {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.colorSwatch {
+  width: 16px;
+  height: 16px;
+  border-radius: var(--mr-radius-full);
+  border: 2px solid transparent;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+  transition: transform 0.12s ease, border-color 0.12s ease;
+}
+
+.colorSwatch:hover,
+.colorSwatch:focus-visible {
+  transform: scale(1.25);
+  border-color: #ffffff;
+}
+
+.actionBtnGroup {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}

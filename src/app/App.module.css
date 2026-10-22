@@ -1,0 +1,66 @@
+.appRoot {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--mr-bg-canvas);
+  color: var(--mr-text-primary);
+}
+
+.globalNav {
+  height: var(--mr-layout-header-h);
+  background-color: var(--mr-bg-surface-1);
+  border-bottom: 1px solid var(--mr-border-default);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--mr-space-6);
+  z-index: 50;
+  user-select: none;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--mr-text-primary);
+  font-weight: 700;
+  font-size: var(--mr-text-md);
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: var(--mr-space-2);
+}
+
+.navLink {
+  padding: 6px 12px;
+  border-radius: var(--mr-radius-sm);
+  color: var(--mr-text-secondary);
+  text-decoration: none;
+  font-size: var(--mr-text-sm);
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+.navLink:hover {
+  color: var(--mr-text-primary);
+  background-color: var(--mr-bg-surface-2);
+}
+
+.navLinkActive {
+  color: var(--mr-accent-primary) !important;
+  background-color: rgba(94, 158, 255, 0.1) !important;
+  font-weight: 600;
+}
+
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}

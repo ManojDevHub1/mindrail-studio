@@ -1,0 +1,202 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: fadeIn 0.15s ease-out;
+}
+
+.modal {
+  width: 100%;
+  max-width: 600px;
+  background-color: var(--mr-bg-surface-1);
+  border: 1px solid var(--mr-border-default);
+  border-radius: var(--mr-radius-lg);
+  box-shadow: var(--mr-shadow-xl);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  outline: none;
+}
+
+.header {
+  padding: 14px 18px;
+  background-color: var(--mr-bg-surface-2);
+  border-bottom: 1px solid var(--mr-border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.titleArea {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.title {
+  font-size: var(--mr-text-md);
+  font-weight: 600;
+  color: var(--mr-text-primary);
+  margin: 0;
+}
+
+.progressBarTrack {
+  height: 4px;
+  background-color: var(--mr-bg-surface-3);
+  width: 100%;
+}
+
+.progressBarFill {
+  height: 100%;
+  background-color: var(--mr-accent-primary);
+  transition: width 0.2s ease;
+}
+
+.cardStage {
+  padding: 24px;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--mr-bg-surface-2);
+  margin: 16px;
+  border: 1px solid var(--mr-border-subtle);
+  border-radius: var(--mr-radius-md);
+  position: relative;
+}
+
+.cardSideLabel {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--mr-text-muted);
+}
+
+.cardText {
+  font-size: var(--mr-text-lg);
+  color: var(--mr-text-primary);
+  line-height: 1.5;
+  text-align: center;
+  margin: 20px 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.hintArea {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: var(--mr-bg-surface-1);
+  border-radius: var(--mr-radius-sm);
+  border: 1px dashed var(--mr-border-default);
+  font-size: var(--mr-text-xs);
+  color: var(--mr-text-secondary);
+  text-align: center;
+}
+
+.revealActionRow {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.confidenceRow {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 16px 16px 16px;
+}
+
+.confidenceTitle {
+  font-size: var(--mr-text-xs);
+  color: var(--mr-text-muted);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.ratingButtons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.ratingBtn {
+  flex: 1;
+  padding: 10px 8px;
+  border-radius: var(--mr-radius-sm);
+  border: 1px solid var(--mr-border-subtle);
+  font-size: var(--mr-text-xs);
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  transition: transform 0.1s ease, filter 0.15s ease;
+}
+
+.ratingBtn:hover {
+  filter: brightness(1.15);
+  transform: translateY(-1px);
+}
+
+.ratingAgain {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: var(--mr-color-danger);
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+.ratingHard {
+  background-color: rgba(245, 158, 11, 0.15);
+  color: var(--mr-node-amber-accent);
+  border-color: rgba(245, 158, 11, 0.4);
+}
+
+.ratingGood {
+  background-color: rgba(94, 158, 255, 0.15);
+  color: var(--mr-node-blue-accent);
+  border-color: rgba(94, 158, 255, 0.4);
+}
+
+.ratingEasy {
+  background-color: rgba(16, 185, 129, 0.15);
+  color: var(--mr-node-emerald-accent);
+  border-color: rgba(16, 185, 129, 0.4);
+}
+
+.footer {
+  padding: 12px 18px;
+  background-color: var(--mr-bg-surface-2);
+  border-top: 1px solid var(--mr-border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.shortcutsHint {
+  font-size: 11px;
+  color: var(--mr-text-muted);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

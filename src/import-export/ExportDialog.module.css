@@ -1,0 +1,50 @@
+.exportGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.exportOptionCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background-color: var(--mr-bg-surface-2);
+  border: 1px solid var(--mr-border-default);
+  border-radius: var(--mr-radius-md);
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+  gap: 16px;
+}
+
+.exportOptionCard:hover {
+  border-color: var(--mr-border-strong);
+  background-color: var(--mr-bg-surface-3);
+}
+
+.optionInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.optionTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.optionTitle {
+  font-size: var(--mr-text-sm);
+  font-weight: 600;
+  color: var(--mr-text-primary);
+  margin: 0;
+}
+
+.optionDescription {
+  font-size: var(--mr-text-xs);
+  color: var(--mr-text-secondary);
+  margin: 0;
+  line-height: 1.4;
+}

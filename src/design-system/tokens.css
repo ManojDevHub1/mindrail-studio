@@ -1,0 +1,177 @@
+:root {
+  /* Background & Surface Layers */
+  --mr-bg-canvas: #0B0D12;
+  --mr-bg-canvas-grid: #1A202C;
+  --mr-bg-surface-1: #121620;
+  --mr-bg-surface-2: #181D2A;
+  --mr-bg-surface-3: #202738;
+  --mr-bg-glass: rgba(18, 22, 32, 0.88);
+
+  /* Typography & Iconography Colors */
+  --mr-text-primary: #F3F6FC;
+  --mr-text-secondary: #A6B1C8;
+  --mr-text-muted: #7E8BA6;
+  --mr-text-on-accent: #080B10;
+
+  /* Workspace & Semantic Accent Colors */
+  --mr-accent-primary: #5E9EFF;
+  --mr-accent-primary-hover: #7DB2FF;
+  --mr-accent-video: #FF8B5E;
+  --mr-accent-student: #4ADE80;
+  --mr-color-info: #38BDF8;
+  --mr-color-success: #34D399;
+  --mr-color-warning: #FBBF24;
+  --mr-color-danger: #F87171;
+
+  /* Node Color Tokens (Accents & 14% Tints) */
+  --mr-node-neutral-accent: #7E8BA6;
+  --mr-node-neutral-tint: rgba(126, 139, 166, 0.14);
+  --mr-node-blue-accent: #5E9EFF;
+  --mr-node-blue-tint: rgba(94, 158, 255, 0.14);
+  --mr-node-purple-accent: #A855F7;
+  --mr-node-purple-tint: rgba(168, 85, 247, 0.14);
+  --mr-node-cyan-accent: #06B6D4;
+  --mr-node-cyan-tint: rgba(6, 182, 212, 0.14);
+  --mr-node-emerald-accent: #10B981;
+  --mr-node-emerald-tint: rgba(16, 185, 129, 0.14);
+  --mr-node-amber-accent: #F59E0B;
+  --mr-node-amber-tint: rgba(245, 158, 11, 0.14);
+  --mr-node-rose-accent: #F43F5E;
+  --mr-node-rose-tint: rgba(244, 63, 94, 0.14);
+  --mr-node-orange-accent: #F97316;
+  --mr-node-orange-tint: rgba(249, 115, 22, 0.14);
+
+  /* Borders */
+  --mr-border-subtle: #232B3E;
+  --mr-border-default: #2F3A52;
+  --mr-border-strong: #475678;
+  --mr-border-focus: #5E9EFF;
+
+  /* Radii */
+  --mr-radius-xs: 4px;
+  --mr-radius-sm: 6px;
+  --mr-radius-md: 10px;
+  --mr-radius-lg: 14px;
+  --mr-radius-full: 9999px;
+
+  /* Shadows */
+  --mr-shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.35);
+  --mr-shadow-md: 0 8px 24px rgba(0, 0, 0, 0.48);
+  --mr-shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.65);
+
+  /* Typography */
+  --mr-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --mr-font-mono: 'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace;
+
+  --mr-text-2xl: 1.75rem;
+  --mr-text-xl: 1.25rem;
+  --mr-text-lg: 1.0rem;
+  --mr-text-md: 0.875rem;
+  --mr-text-sm: 0.8125rem;
+  --mr-text-xs: 0.75rem;
+
+  /* Spacing */
+  --mr-space-1: 4px;
+  --mr-space-2: 8px;
+  --mr-space-3: 12px;
+  --mr-space-4: 16px;
+  --mr-space-5: 20px;
+  --mr-space-6: 24px;
+  --mr-space-8: 32px;
+  --mr-space-10: 40px;
+  --mr-space-12: 48px;
+
+  /* Layout */
+  --mr-layout-header-h: 52px;
+  --mr-canvas-grid-size: 16px;
+}
+
+/* Global Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--mr-bg-canvas);
+  color: var(--mr-text-primary);
+  font-family: var(--mr-font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Focus Ring Utility */
+:focus-visible {
+  outline: 2px solid var(--mr-border-focus);
+  outline-offset: 2px;
+}
+
+/* Tabular Nums */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Skip link */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-to-content:focus {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 9999;
+  width: auto;
+  height: auto;
+  padding: 8px 16px;
+  background: var(--mr-accent-primary);
+  color: var(--mr-text-on-accent);
+  font-weight: 600;
+  border-radius: var(--mr-radius-sm);
+  clip: auto;
+  overflow: visible;
+  outline: none;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--mr-bg-surface-1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--mr-border-strong);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--mr-text-muted);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
