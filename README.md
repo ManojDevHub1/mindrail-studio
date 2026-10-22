@@ -263,3 +263,5 @@ Canonical specifications are maintained in `docs/`:
 ## License
 
 This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+#   m i n d r a i l - s t u d i o  
+ 
